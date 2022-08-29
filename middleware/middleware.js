@@ -4,10 +4,10 @@ const authentication = async function (req, res, next) {
     try {
         const token = req.headers.authorization;
         if (token) {
-            bearertoken = token.split(" ")
-            const decoded = jwt.verify(bearertoken[1], 'privatekey')
+            bearertoken = token.split(" ")                               //spliting the bearer token as we only wants to verify token 
+            const decoded = jwt.verify(bearertoken[1], 'privatekey')     //verifying the token with secrete key
             if (decoded) {
-                req.decodedToken = decoded
+                req.decodedToken = decoded                              //taking on field decodedToken in req and assignng verified token (decoded) to it 
             }
             else {
                 return res.status(401).send({ status: false, msg: "invalid authentication token" })

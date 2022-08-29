@@ -5,8 +5,9 @@ const mongoose = require('mongoose')
 const router = require('./router/route')
 const aws = require("aws-sdk")
 const multer = require('multer')
+const cors=require('cors')
 
-
+app.use(cors())                  //cors package added to avoid cors issues
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 

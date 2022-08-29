@@ -4,8 +4,8 @@ const userContoller = require('../controller/usercontroller')
 
 aws.config.update(
     {
-        accessKeyId: "AKIAY3L35MCRVFM24Q7U",
-        secretAccessKey: "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",
+        accessKeyId: "AKIAY3L35MCRVFM24Q7U",                     //aws creds
+        secretAccessKey: "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",    //aws creds
         region: "ap-south-1"
     }
 )

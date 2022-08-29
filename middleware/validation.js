@@ -11,15 +11,15 @@ const isvalid = (value) => {
 }
 
 const isValidEmail = function(email) {
-    return  (/^\w+([\.-]?\w+)@\w+([\. -]?\w+)(\.\w{2,3})+$/.test(email))
+    return  (/^\w+([\.-]?\w+)@\w+([\. -]?\w+)(\.\w{2,3})+$/.test(email))      //regex used for email validation
   }
 
   const isValidPhone = function(phone){
-    return (/^[6-9]\d{9}$/.test(phone))
+    return (/^[6-9]\d{9}$/.test(phone))                    //regex used for phone number validation
 }
 
 const isValidObjectId= function(ObjectId){
-  return mongoose.Types.ObjectId.isValid(ObjectId)
+  return mongoose.Types.ObjectId.isValid(ObjectId)             //to check _id's are correct or not 
 }
 
 
